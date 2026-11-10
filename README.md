@@ -1,5 +1,5 @@
-# Aarish Goundar Performance
+# WorkoutHub
 
 Modern single-page website for Aarish Goundar: 1:1 personal training, running, HYROX and nutrition coaching.
 
-Live: https://peaklimitsdigital.github.io/aarish-goundar-performance/
+Live: https://peaklimitsdigital.github.io/workouthub/
