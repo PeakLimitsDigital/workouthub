@@ -180,6 +180,13 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
 .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
 .foot .links{gap:26px}
 
+/* PARALLAX */
+[data-speed],[data-x],[data-scale]{will-change:translate,scale}
+.band{padding:90px 0;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at center,rgba(47,214,79,.08),transparent 70%)}
+.band-row{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(70px,12vw,170px);line-height:1;white-space:nowrap}
+.band-row.out{color:transparent;-webkit-text-stroke:1.5px #3a3a42}
+.band-row.fill{color:var(--accent)}
+.band-row em{font-style:normal;color:var(--text)}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
 
@@ -227,20 +234,20 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
 
 <header class="hero" id="top">
   <div class="track"></div>
-  <div class="hero-photo" aria-hidden="true"></div>
+  <div class="hero-photo" aria-hidden="true" data-speed=".35"></div>
   <div class="wrap" style="position:relative;z-index:1">
     <div class="eyebrow">Running · HYROX · Strength · Nutrition</div>
-    <h1 class="display">Built <span class="stroke">for</span><br><span class="lime">Progress.</span></h1>
+    <h1 class="display"><span data-speed="-.08" style="display:inline-block">Built</span> <span class="stroke" data-speed=".1" style="display:inline-block">for</span><br><span class="lime" data-speed="-.18" style="display:inline-block">Progress.</span></h1>
     <p class="lead">1:1 personal training and structured programmes for everyday athletes. Whether it's your first 5K or your next HYROX PB — train with purpose and make every session count.</p>
     <div class="hero-ctas">
       <a href="#programmes" class="btn btn-primary">Explore programmes <span class="arrow">↗</span></a>
       <a href="#finder" class="btn btn-ghost">Help me choose</a>
     </div>
     <div class="hero-meta">
-      <div><b>1:1</b><span>Personal training</span></div>
-      <div><b>9</b><span>Run &amp; HYROX plans</span></div>
-      <div><b>8–16</b><span>Week programmes</span></div>
-      <div><b>NZ</b><span>Based · Online worldwide</span></div>
+      <div data-speed="-.04"><b>1:1</b><span>Personal training</span></div>
+      <div data-speed="-.08"><b>9</b><span>Run &amp; HYROX plans</span></div>
+      <div data-speed="-.12"><b>8–16</b><span>Week programmes</span></div>
+      <div data-speed="-.16"><b>NZ</b><span>Based · Online worldwide</span></div>
     </div>
   </div>
 </header>
@@ -264,21 +271,21 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
         <h3>Running</h3>
         <p>5K, 10K and half marathon programmes for beginner, intermediate and advanced runners.</p>
         <div class="price">From <em>$79 NZD</em> →</div>
-        <span class="big display">RUN.</span>
+        <span class="big display" data-speed=".3">RUN.</span>
       </a>
       <a href="#programmes" data-tab="hyrox" class="pillar reveal">
         <span class="num">02</span>
         <h3>HYROX</h3>
         <p>Build your engine and your confidence with progressive 8, 12 and 16-week race programmes.</p>
         <div class="price">From <em>$99 NZD</em> →</div>
-        <span class="big display">HYROX.</span>
+        <span class="big display" data-speed=".3">HYROX.</span>
       </a>
       <a href="#programmes" data-tab="fuel" class="pillar reveal">
         <span class="num">03</span>
         <h3>Nutrition</h3>
         <p>Self-guided education, personalised nutrition frameworks and ongoing 1:1 coaching.</p>
         <div class="price">From <em>$39 NZD</em> →</div>
-        <span class="big display">FUEL.</span>
+        <span class="big display" data-speed=".3">FUEL.</span>
       </a>
     </div>
   </div>
@@ -301,10 +308,15 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
         <a href="https://www.instagram.com/unrivaledfitnessnz/" target="_blank" rel="noopener" class="btn btn-ghost">@unrivaledfitnessnz</a>
       </div>
     </div>
-    <div class="pt-visual reveal" role="img" aria-label="Unrivaled Fitness welcomes Aarish to the personal training team">
+    <div class="pt-visual reveal" data-speed="-.14" role="img" aria-label="Unrivaled Fitness welcomes Aarish to the personal training team">
     </div>
   </div>
 </section>
+
+<div class="band" aria-hidden="true">
+  <div class="band-row out" data-x="-.35">Strength · Running · HYROX · Strength · Running · HYROX</div>
+  <div class="band-row fill" data-x=".35" style="margin-left:-60vw">Built through <em>small wins</em> every day · Built through <em>small wins</em> every day</div>
+</div>
 
 <section id="programmes">
   <div class="wrap">
@@ -404,10 +416,10 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
       <div><div class="eyebrow">How it works</div><h2 class="display">Simple from<br>start to finish.</h2></div>
     </div>
     <div class="steps reveal">
-      <div class="step"><b>01</b><h5>Explore</h5><p>Browse plans or use the plan finder to find your fit.</p></div>
-      <div class="step"><b>02</b><h5>Review</h5><p>Check suitability details and what's included.</p></div>
-      <div class="step"><b>03</b><h5>Purchase</h5><p>Pay securely online in a few clicks.</p></div>
-      <div class="step"><b>04</b><h5>Get started</h5><p>Your programme lands in your inbox — time to train.</p></div>
+      <div class="step"><b data-speed="-.05">01</b><h5>Explore</h5><p>Browse plans or use the plan finder to find your fit.</p></div>
+      <div class="step"><b data-speed="-.12">02</b><h5>Review</h5><p>Check suitability details and what's included.</p></div>
+      <div class="step"><b data-speed="-.19">03</b><h5>Purchase</h5><p>Pay securely online in a few clicks.</p></div>
+      <div class="step"><b data-speed="-.26">04</b><h5>Get started</h5><p>Your programme lands in your inbox — time to train.</p></div>
     </div>
   </div>
 </section>
@@ -449,7 +461,7 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
 
 <section class="coach pt" id="coach">
   <div class="wrap coach-grid">
-    <div class="coach-card reveal" role="img" aria-label="Aarish Goundar, coach">
+    <div class="coach-card reveal" data-speed="-.12" role="img" aria-label="Aarish Goundar, coach">
       <div class="row"><span>Coach</span><span>🇫🇯 · NZ</span></div>
       <div class="row"><span>Running</span><span>HYROX</span><span>Strength</span></div>
     </div>
@@ -481,7 +493,7 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
 
 <section class="cta">
   <div class="wrap">
-    <h2 class="display">Your pace.<br>Your process.<br><span>Your progress.</span></h2>
+    <h2 class="display" data-scale>Your pace.<br>Your process.<br><span>Your progress.</span></h2>
     <p>Ready to start? Pick a programme or reach out about 1:1 coaching.</p>
     <div class="hero-ctas">
       <a href="#programmes" class="btn btn-primary">Start training <span class="arrow">↗</span></a>
@@ -517,6 +529,28 @@ document.querySelectorAll('.pillar').forEach(p=>p.addEventListener('click',()=>s
 
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Parallax: data-speed moves vertically against scroll (negative = rushes toward you), data-x slides sideways, data-scale grows into view.
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const els=[...document.querySelectorAll('[data-speed],[data-x],[data-scale]')];
+  const k=()=>innerWidth<760?.5:1;
+  let ticking=false;
+  function update(){
+    const vh=innerHeight,m=k();
+    for(const el of els){
+      const r=el.getBoundingClientRect();
+      if(r.bottom<-200||r.top>vh+200)continue;
+      const d=(r.top+r.height/2)-vh/2;
+      if(el.dataset.speed)el.style.translate='0 '+(d*parseFloat(el.dataset.speed)*m).toFixed(1)+'px';
+      if(el.dataset.x)el.style.translate=(d*parseFloat(el.dataset.x)*m*1.4).toFixed(1)+'px 0';
+      if(el.hasAttribute('data-scale')){const p=Math.max(0,Math.min(1,1-Math.abs(d)/vh));el.style.scale=(.82+.18*p).toFixed(3)}
+    }
+    ticking=false;
+  }
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',update);update();
+})();
 
 const ans={};
 const plans={'5K':['5K','$79'],'10K':['10K','$119'],'Half Marathon':['Half Marathon','$159']};
