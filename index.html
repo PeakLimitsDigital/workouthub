@@ -64,7 +64,7 @@ nav.scrolled{background:rgba(10,10,11,.82);backdrop-filter:blur(14px);border-col
 .hero-meta div b{display:block;font-family:Anton,sans-serif;font-size:38px;font-weight:400}
 .hero-meta div span{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
 /* PHOTO SLOTS: drop images/hero.jpg, images/pt.jpg, images/coach.jpg into the repo and they appear here. If a file is missing the design falls back to graphics. */
-.hero-photo{position:absolute;top:0;right:0;bottom:0;width:48%;background:url(images/hero.jpg) center top/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);mask-image:linear-gradient(90deg,transparent,#000 45%);opacity:.9;pointer-events:none}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:min(42%,560px);background:url(images/hero.jpg) center top/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);mask-image:linear-gradient(90deg,transparent,#000 45%);opacity:.9;pointer-events:none}
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg),transparent 35%)}
 
 /* MARQUEE */
@@ -98,7 +98,7 @@ section{padding:120px 0}
 .checks{list-style:none;margin:30px 0 40px;display:grid;gap:14px}
 .checks li{display:flex;gap:14px;align-items:flex-start}
 .checks li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a0a0b' stroke-width='3.5'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/13px no-repeat;margin-top:2px}
-.pt-visual{aspect-ratio:4/5;border-radius:24px;position:relative;overflow:hidden;background:linear-gradient(0deg,rgba(10,10,11,.92),transparent 55%),url(images/pt.jpg) center/cover no-repeat,linear-gradient(160deg,#1c1c22,#0d0d10);border:1px solid var(--line);display:flex;align-items:flex-end;padding:34px}
+.pt-visual{aspect-ratio:302/415;max-width:480px;width:100%;justify-self:center;border-radius:24px;position:relative;overflow:hidden;background:url(images/pt.jpg) center/cover no-repeat,#121216;border:1px solid var(--line);box-shadow:0 30px 80px -20px rgba(47,214,79,.35)}
 .pt-visual .ring{position:absolute;border-radius:50%;border:1px solid rgba(47,214,79,.35)}
 .pt-visual .r1{width:520px;height:520px;top:-140px;right:-200px}
 .pt-visual .r2{width:360px;height:360px;top:-60px;right:-120px;border-color:rgba(47,214,79,.55)}
@@ -153,7 +153,7 @@ section{padding:120px 0}
 /* COACH */
 .coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .coach-card{aspect-ratio:1;border-radius:24px;background:linear-gradient(0deg,rgba(10,10,11,.85),transparent 45%),linear-gradient(180deg,rgba(10,10,11,.6),transparent 30%),url(images/coach.jpg) center top/cover no-repeat,radial-gradient(circle at 30% 20%,rgba(47,214,79,.22),transparent 55%),radial-gradient(circle at 80% 90%,rgba(15,122,42,.22),transparent 50%),#121216;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;padding:40px}
-.coach-card .mono{font-family:Anton,sans-serif;font-size:clamp(120px,18vw,240px);line-height:.8;color:transparent;-webkit-text-stroke:2px var(--text)}
+.coach-card{aspect-ratio:4/5;max-width:460px;width:100%;justify-self:center;box-shadow:0 30px 80px -20px rgba(47,214,79,.3)}
 .coach-card .row{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em}
 .coach h2{font-size:clamp(46px,6.5vw,86px);margin:14px 0 26px}
 .coach p{color:var(--muted);font-size:17px;margin-bottom:18px}
@@ -291,20 +291,17 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
       <h2 class="display">Coached in<br>person. Built<br>for you.</h2>
       <p>Train one-on-one with Aarish at Unrivaled Fitness NZ. Every session is planned around your goal — whether that's getting stronger, running faster, or preparing for race day.</p>
       <ul class="checks">
-        <li>Strength &amp; conditioning tailored to your level</li>
-        <li>Run technique, pacing and hybrid engine work</li>
-        <li>HYROX station coaching — sleds, wall balls, burpee broad jumps</li>
-        <li>Nutrition guidance to fuel training and recovery</li>
+        <li>Strength &amp; muscle development</li>
+        <li>Running &amp; race preparation</li>
+        <li>HYROX competition prep &amp; hybrid training</li>
+        <li>Nutrition &amp; healthy habits</li>
       </ul>
       <div class="hero-ctas">
         <a href="https://www.instagram.com/aarishgoundar/" target="_blank" rel="noopener" class="btn btn-primary">Enquire about PT <span class="arrow">↗</span></a>
         <a href="https://www.instagram.com/unrivaledfitnessnz/" target="_blank" rel="noopener" class="btn btn-ghost">@unrivaledfitnessnz</a>
       </div>
     </div>
-    <div class="pt-visual reveal" aria-hidden="true">
-      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
-      <div class="tag">Unrivaled Fitness · NZ</div>
-      <div class="quote">Earn the<br><span>intensity.</span></div>
+    <div class="pt-visual reveal" role="img" aria-label="Unrivaled Fitness welcomes Aarish to the personal training team">
     </div>
   </div>
 </section>
@@ -452,9 +449,8 @@ footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-s
 
 <section class="coach pt" id="coach">
   <div class="wrap coach-grid">
-    <div class="coach-card reveal" aria-hidden="true">
+    <div class="coach-card reveal" role="img" aria-label="Aarish Goundar, coach">
       <div class="row"><span>Coach</span><span>🇫🇯 · NZ</span></div>
-      <div class="mono">AG</div>
       <div class="row"><span>Running</span><span>HYROX</span><span>Strength</span></div>
     </div>
     <div class="reveal">
