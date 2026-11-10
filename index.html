@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aarish Goundar Performance — Running · HYROX · Strength</title>
+<meta name="description" content="1:1 personal training, running and HYROX programmes, and nutrition coaching with Aarish Goundar, New Zealand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b; --bg2:#121214; --card:#16161a; --line:#26262c;
+  --text:#f4f3ef; --muted:#9a9aa3; --accent:#d4ff3a; --accent2:#ff5a1f;
+  --radius:18px; --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.display{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.92}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s,color .2s}
+.btn-primary{background:var(--accent);color:#0a0a0b}
+.btn-primary:hover{transform:translateY(-2px);background:#e6ff7a}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--text)}
+.arrow{transition:transform .2s}.btn:hover .arrow{transform:translate(3px,-3px)}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(10,10,11,.82);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:Anton,sans-serif;font-size:22px;letter-spacing:.04em}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:34px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.nav-cta{padding:11px 20px;font-size:14px}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:26px;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:140px 0 80px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-200px;background:radial-gradient(circle,rgba(212,255,58,.16),transparent 60%);pointer-events:none}
+.hero::after{content:"";position:absolute;width:700px;height:700px;left:-300px;bottom:-350px;background:radial-gradient(circle,rgba(255,90,31,.12),transparent 60%);pointer-events:none}
+.track{position:absolute;inset:0;opacity:.07;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 119px,#fff 119px 120px)}
+.hero h1{font-size:clamp(64px,13vw,190px);margin:22px 0 28px}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--text)}
+.hero h1 .lime{color:var(--accent)}
+.hero p.lead{max-width:540px;font-size:19px;color:var(--muted);margin-bottom:38px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:48px;margin-top:70px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:30px}
+.hero-meta div b{display:block;font-family:Anton,sans-serif;font-size:38px;font-weight:400}
+.hero-meta div span{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);background:var(--accent);color:#0a0a0b;overflow:hidden;white-space:nowrap;padding:18px 0}
+.marquee-in{display:inline-flex;gap:48px;animation:scroll 28s linear infinite;font-family:Anton,sans-serif;font-size:28px;text-transform:uppercase}
+.marquee-in span::after{content:"✦";margin-left:48px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:60px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(46px,7vw,92px);margin-top:14px}
+.sec-head p{max-width:420px;color:var(--muted)}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pillar{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:38px 32px 34px;overflow:hidden;transition:transform .3s,border-color .3s;min-height:420px;display:flex;flex-direction:column}
+.pillar:hover{transform:translateY(-6px);border-color:var(--accent)}
+.pillar .big{font-size:96px;color:transparent;-webkit-text-stroke:1.5px #3a3a42;position:absolute;right:-6px;bottom:-14px;transition:-webkit-text-stroke-color .3s}
+.pillar:hover .big{-webkit-text-stroke-color:var(--accent)}
+.pillar .num{font-size:13px;color:var(--muted);font-weight:600}
+.pillar h3{font-family:Anton,sans-serif;font-weight:400;font-size:34px;text-transform:uppercase;margin:18px 0 12px}
+.pillar p{color:var(--muted);margin-bottom:26px}
+.pillar .price{margin-top:auto;font-weight:600;position:relative;z-index:1}
+.pillar .price em{font-style:normal;color:var(--accent)}
+
+/* PT FEATURE */
+.pt{background:var(--bg2);border-block:1px solid var(--line)}
+.pt-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:center}
+.pt h2{font-size:clamp(46px,6.5vw,86px);margin:14px 0 24px}
+.pt p{color:var(--muted);font-size:17px;margin-bottom:18px}
+.checks{list-style:none;margin:30px 0 40px;display:grid;gap:14px}
+.checks li{display:flex;gap:14px;align-items:flex-start}
+.checks li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a0a0b' stroke-width='3.5'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/13px no-repeat;margin-top:2px}
+.pt-visual{aspect-ratio:4/5;border-radius:24px;position:relative;overflow:hidden;background:linear-gradient(160deg,#1c1c22,#0d0d10);border:1px solid var(--line);display:flex;align-items:flex-end;padding:34px}
+.pt-visual .ring{position:absolute;border-radius:50%;border:1px solid rgba(212,255,58,.35)}
+.pt-visual .r1{width:520px;height:520px;top:-140px;right:-200px}
+.pt-visual .r2{width:360px;height:360px;top:-60px;right:-120px;border-color:rgba(212,255,58,.55)}
+.pt-visual .r3{width:200px;height:200px;top:20px;right:-40px;background:var(--accent);border:0;filter:blur(.3px)}
+.pt-visual .tag{position:absolute;top:34px;left:34px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.pt-visual .quote{font-family:Anton,sans-serif;font-size:clamp(40px,4.6vw,62px);text-transform:uppercase;line-height:.95;position:relative}
+.pt-visual .quote span{color:var(--accent)}
+
+/* PROGRAMMES */
+.tabs{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;margin-bottom:40px;flex-wrap:wrap}
+.tab{background:none;border:0;color:var(--muted);font:600 14px Inter,sans-serif;padding:12px 24px;border-radius:999px;cursor:pointer;transition:all .2s}
+.tab.active{background:var(--text);color:#0a0a0b}
+.panel{display:none;grid-template-columns:repeat(3,1fr);gap:20px}
+.panel.active{display:grid;animation:fade .5s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;transition:border-color .3s}
+.plan:hover{border-color:#44444d}
+.plan.feat{border-color:var(--accent);background:linear-gradient(180deg,rgba(212,255,58,.07),var(--card) 50%)}
+.plan .meta{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}
+.plan .meta .pop{color:var(--accent)}
+.plan h4{font-family:Anton,sans-serif;font-weight:400;font-size:40px;text-transform:uppercase;margin:16px 0 8px;line-height:1}
+.plan p{color:var(--muted);font-size:15px;margin-bottom:26px}
+.plan .amt{font-family:Anton,sans-serif;font-size:52px;line-height:1}
+.plan .amt small{font-family:Inter,sans-serif;font-size:14px;color:var(--muted);margin-left:6px}
+.plan .note{font-size:13px;color:var(--muted);margin:8px 0 26px}
+.plan .btn{margin-top:auto;justify-content:center}
+.levels{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.levels span{font-size:12px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+
+/* PROCESS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.step{padding:34px 28px 0 0;border-right:1px solid var(--line);margin-right:28px}
+.step:last-child{border-right:0;margin-right:0}
+.step b{font-family:Anton,sans-serif;font-weight:400;font-size:64px;color:var(--accent);display:block;line-height:1;margin-bottom:18px}
+.step h5{font-size:18px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15px;padding-bottom:10px}
+
+/* FINDER */
+.finder{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:56px;display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.finder h2{font-size:clamp(44px,5.5vw,72px);margin:14px 0 18px}
+.finder p{color:var(--muted)}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--bg);border:1px solid var(--line);color:var(--text);padding:11px 18px;border-radius:999px;font:500 14px Inter,sans-serif;cursor:pointer;transition:all .2s}
+.chip:hover{border-color:#55555e}
+.chip.on{background:var(--accent);color:#0a0a0b;border-color:var(--accent)}
+.result{margin-top:26px;padding:24px;border-radius:16px;background:var(--bg);border:1px dashed #3a3a42;min-height:96px}
+.result .r-title{font-family:Anton,sans-serif;font-size:30px;text-transform:uppercase;color:var(--accent)}
+.result small{color:var(--muted);display:block;margin-top:6px}
+
+/* COACH */
+.coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.coach-card{aspect-ratio:1;border-radius:24px;background:radial-gradient(circle at 30% 20%,rgba(212,255,58,.22),transparent 55%),radial-gradient(circle at 80% 90%,rgba(255,90,31,.22),transparent 50%),#121216;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;padding:40px}
+.coach-card .mono{font-family:Anton,sans-serif;font-size:clamp(120px,18vw,240px);line-height:.8;color:transparent;-webkit-text-stroke:2px var(--text)}
+.coach-card .row{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em}
+.coach h2{font-size:clamp(46px,6.5vw,86px);margin:14px 0 26px}
+.coach p{color:var(--muted);font-size:17px;margin-bottom:18px}
+.coach .sig{font-family:Anton,sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.06em;color:var(--text);margin-top:30px}
+
+/* FAQ */
+.faq{max-width:860px}
+details{border-bottom:1px solid var(--line);padding:26px 0}
+summary{list-style:none;cursor:pointer;font-size:20px;font-weight:600;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:28px;line-height:1;color:var(--accent);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:14px;max-width:720px}
+
+/* CTA */
+.cta{text-align:center;padding:140px 0;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(212,255,58,.14),transparent 60%)}
+.cta h2{font-size:clamp(56px,11vw,160px);position:relative}
+.cta h2 span{color:var(--accent)}
+.cta p{color:var(--muted);font-size:18px;margin:24px auto 40px;max-width:520px;position:relative}
+.cta .hero-ctas{justify-content:center;position:relative}
+
+footer{border-top:1px solid var(--line);padding:50px 0;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot .links{gap:26px}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .pillars,.panel.active{grid-template-columns:1fr}
+  .pt-grid,.coach-grid,.finder{grid-template-columns:1fr;gap:44px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:20px}
+  .step:nth-child(2){border-right:0;margin-right:0}
+  .finder{padding:32px 22px}
+  .pillar{min-height:340px}
+}
+@media (max-width:760px){
+  .links,.nav-cta{display:none}
+  .burger{display:block}
+  nav.open{background:rgba(10,10,11,.97)}
+  nav.open .links{display:flex;flex-direction:column;position:absolute;top:76px;left:0;right:0;background:rgba(10,10,11,.97);padding:20px 24px 30px;gap:20px;font-size:18px;border-bottom:1px solid var(--line)}
+  section{padding:84px 0}
+  .wrap{padding:0 16px}
+  .hero-meta{gap:28px}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:0;margin-right:0;border-bottom:1px solid var(--line)}
+  .marquee-in{font-size:22px}
+  .foot .links{display:flex;flex-direction:row;position:static;padding:0;background:none;border:0;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo">AARISH<span>.</span></a>
+    <div class="links">
+      <a href="#coaching">Coaching</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#finder">Plan Finder</a>
+      <a href="#coach">About</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#coaching" class="btn btn-primary nav-cta">Train with me</a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="track"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="eyebrow">Running · HYROX · Strength · Nutrition</div>
+    <h1 class="display">Built <span class="stroke">for</span><br><span class="lime">Progress.</span></h1>
+    <p class="lead">1:1 personal training and structured programmes for everyday athletes. Whether it's your first 5K or your next HYROX PB — train with purpose and make every session count.</p>
+    <div class="hero-ctas">
+      <a href="#programmes" class="btn btn-primary">Explore programmes <span class="arrow">↗</span></a>
+      <a href="#finder" class="btn btn-ghost">Help me choose</a>
+    </div>
+    <div class="hero-meta">
+      <div><b>1:1</b><span>Personal training</span></div>
+      <div><b>9</b><span>Run &amp; HYROX plans</span></div>
+      <div><b>8–16</b><span>Week programmes</span></div>
+      <div><b>NZ</b><span>Based · Online worldwide</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-in">
+    <span>Your pace</span><span>Your process</span><span>Your progress</span><span>Run</span><span>HYROX</span><span>Fuel</span><span>Strength</span>
+    <span>Your pace</span><span>Your process</span><span>Your progress</span><span>Run</span><span>HYROX</span><span>Fuel</span><span>Strength</span>
+  </div>
+</div>
+
+<section id="disciplines">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Choose your direction</div><h2 class="display">Find your next<br>challenge.</h2></div>
+      <p>Clear programmes. Realistic progression. Coaching built around real life — not the other way round.</p>
+    </div>
+    <div class="pillars">
+      <a href="#programmes" data-tab="run" class="pillar reveal">
+        <span class="num">01</span>
+        <h3>Running</h3>
+        <p>5K, 10K and half marathon programmes for beginner, intermediate and advanced runners.</p>
+        <div class="price">From <em>$79 NZD</em> →</div>
+        <span class="big display">RUN.</span>
+      </a>
+      <a href="#programmes" data-tab="hyrox" class="pillar reveal">
+        <span class="num">02</span>
+        <h3>HYROX</h3>
+        <p>Build your engine and your confidence with progressive 8, 12 and 16-week race programmes.</p>
+        <div class="price">From <em>$99 NZD</em> →</div>
+        <span class="big display">HYROX.</span>
+      </a>
+      <a href="#programmes" data-tab="fuel" class="pillar reveal">
+        <span class="num">03</span>
+        <h3>Nutrition</h3>
+        <p>Self-guided education, personalised nutrition frameworks and ongoing 1:1 coaching.</p>
+        <div class="price">From <em>$39 NZD</em> →</div>
+        <span class="big display">FUEL.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pt" id="coaching">
+  <div class="wrap pt-grid">
+    <div class="reveal">
+      <div class="eyebrow">1:1 Personal Training</div>
+      <h2 class="display">Coached in<br>person. Built<br>for you.</h2>
+      <p>Train one-on-one with Aarish at Unrivaled Fitness NZ. Every session is planned around your goal — whether that's getting stronger, running faster, or preparing for race day.</p>
+      <ul class="checks">
+        <li>Strength &amp; conditioning tailored to your level</li>
+        <li>Run technique, pacing and hybrid engine work</li>
+        <li>HYROX station coaching — sleds, wall balls, burpee broad jumps</li>
+        <li>Nutrition guidance to fuel training and recovery</li>
+      </ul>
+      <div class="hero-ctas">
+        <a href="https://www.instagram.com/aarishgoundar/" target="_blank" rel="noopener" class="btn btn-primary">Enquire about PT <span class="arrow">↗</span></a>
+        <a href="https://www.instagram.com/unrivaledfitnessnz/" target="_blank" rel="noopener" class="btn btn-ghost">@unrivaledfitnessnz</a>
+      </div>
+    </div>
+    <div class="pt-visual reveal" aria-hidden="true">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="tag">Unrivaled Fitness · NZ</div>
+      <div class="quote">Earn the<br><span>intensity.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="programmes">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Programmes</div><h2 class="display">Train anywhere.<br>Progress everywhere.</h2></div>
+      <p>Prewritten digital programmes with clear weekly sessions. One-time purchase, delivered by email. All prices NZD.</p>
+    </div>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab active" data-tab="run">Running</button>
+      <button class="tab" data-tab="hyrox">HYROX</button>
+      <button class="tab" data-tab="fuel">Nutrition</button>
+    </div>
+
+    <div class="panel active" id="panel-run">
+      <div class="plan">
+        <div class="meta"><span>8 weeks</span><span>Digital</span></div>
+        <h4>5K</h4>
+        <p>Build a consistent running habit and cross the line strong with structured weekly progression.</p>
+        <div class="levels"><span>Beginner</span><span>Intermediate</span><span>Advanced</span></div>
+        <div class="amt">$79<small>NZD</small></div><div class="note">One-time purchase</div>
+        <a class="btn btn-ghost" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Get the plan <span class="arrow">↗</span></a>
+      </div>
+      <div class="plan feat">
+        <div class="meta"><span>12 weeks</span><span class="pop">Most popular</span></div>
+        <h4>10K</h4>
+        <p>Develop aerobic base, speed and pacing confidence over a progressive 12-week block.</p>
+        <div class="levels"><span>Beginner</span><span>Intermediate</span><span>Advanced</span></div>
+        <div class="amt">$119<small>NZD</small></div><div class="note">One-time purchase</div>
+        <a class="btn btn-primary" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Get the plan <span class="arrow">↗</span></a>
+      </div>
+      <div class="plan">
+        <div class="meta"><span>16 weeks</span><span>Digital</span></div>
+        <h4>Half Marathon</h4>
+        <p>Go the distance with long-run progression, workouts and a taper that has you race-ready.</p>
+        <div class="levels"><span>Beginner</span><span>Intermediate</span><span>Advanced</span></div>
+        <div class="amt">$159<small>NZD</small></div><div class="note">One-time purchase</div>
+        <a class="btn btn-ghost" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Get the plan <span class="arrow">↗</span></a>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-hyrox">
+      <div class="plan">
+        <div class="meta"><span>8 weeks</span><span>Digital</span></div>
+        <h4>Foundation</h4>
+        <p>Learn the stations, build your running engine and get to the start line with confidence.</p>
+        <div class="levels"><span>Beginner</span><span>Intermediate</span><span>Advanced</span></div>
+        <div class="amt">$99<small>NZD</small></div><div class="note">One-time purchase</div>
+        <a class="btn btn-ghost" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Get the plan <span class="arrow">↗</span></a>
+      </div>
+      <div class="plan feat">
+        <div class="meta"><span>12 weeks</span><span class="pop">Most popular</span></div>
+        <h4>Performance</h4>
+        <p>Compromised running, station efficiency and threshold work to take minutes off your time.</p>
+        <div class="levels"><span>Beginner</span><span>Intermediate</span><span>Advanced</span></div>
+        <div class="amt">$149<small>NZD</small></div><div class="note">One-time purchase</div>
+        <a class="btn btn-primary" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Get the plan <span class="arrow">↗</span></a>
+      </div>
+      <div class="plan">
+        <div class="meta"><span>16 weeks</span><span>Digital</span></div>
+        <h4>Complete</h4>
+        <p>The full build — strength, engine and race simulation for your best HYROX yet.</p>
+        <div class="levels"><span>Beginner</span><span>Intermediate</span><span>Advanced</span></div>
+        <div class="amt">$199<small>NZD</small></div><div class="note">One-time purchase</div>
+        <a class="btn btn-ghost" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Get the plan <span class="arrow">↗</span></a>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-fuel">
+      <div class="plan">
+        <div class="meta"><span>Self-guided</span><span>Digital</span></div>
+        <h4>Foundations Guide</h4>
+        <p>Practical foundations for fuelling training and building sustainable eating habits.</p>
+        <div class="amt">$39<small>NZD</small></div><div class="note">One-time purchase</div>
+        <a class="btn btn-ghost" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Get the guide <span class="arrow">↗</span></a>
+      </div>
+      <div class="plan">
+        <div class="meta"><span>Individual</span><span>Online</span></div>
+        <h4>Personalised Framework</h4>
+        <p>A tailored nutrition framework following a detailed intake and suitability review.</p>
+        <div class="amt">$129<small>NZD</small></div><div class="note">Enquire before payment</div>
+        <a class="btn btn-ghost" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Enquire now <span class="arrow">↗</span></a>
+      </div>
+      <div class="plan feat">
+        <div class="meta"><span>8 weeks</span><span class="pop">Full support</span></div>
+        <h4>Nutrition Coaching</h4>
+        <p>Individual nutrition support with weekly check-ins and progress reviews.</p>
+        <div class="amt">$360<small>NZD</small></div><div class="note">Enquire before payment</div>
+        <a class="btn btn-primary" href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">Enquire now <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">How it works</div><h2 class="display">Simple from<br>start to finish.</h2></div>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><b>01</b><h5>Explore</h5><p>Browse plans or use the plan finder to find your fit.</p></div>
+      <div class="step"><b>02</b><h5>Review</h5><p>Check suitability details and what's included.</p></div>
+      <div class="step"><b>03</b><h5>Purchase</h5><p>Pay securely online in a few clicks.</p></div>
+      <div class="step"><b>04</b><h5>Get started</h5><p>Your programme lands in your inbox — time to train.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="finder" style="padding-top:0">
+  <div class="wrap">
+    <div class="finder reveal">
+      <div>
+        <div class="eyebrow">Plan finder</div>
+        <h2 class="display">Not sure where<br>to start?</h2>
+        <p>Answer three quick questions for a general programme suggestion. This isn't an individual prescription or medical screening — if you have an injury or condition, reach out first.</p>
+      </div>
+      <div>
+        <div class="field"><label>Your goal</label>
+          <div class="chips" data-q="goal">
+            <button class="chip" data-v="5K">Run a 5K</button>
+            <button class="chip" data-v="10K">Run a 10K</button>
+            <button class="chip" data-v="Half Marathon">Half marathon</button>
+            <button class="chip" data-v="HYROX">HYROX</button>
+            <button class="chip" data-v="Nutrition">Nutrition</button>
+          </div></div>
+        <div class="field"><label>Experience</label>
+          <div class="chips" data-q="level">
+            <button class="chip" data-v="Beginner">Beginner</button>
+            <button class="chip" data-v="Intermediate">Intermediate</button>
+            <button class="chip" data-v="Advanced">Advanced</button>
+          </div></div>
+        <div class="field"><label>Weekly availability</label>
+          <div class="chips" data-q="avail">
+            <button class="chip" data-v="1">1–3 sessions</button>
+            <button class="chip" data-v="2">4–5 sessions</button>
+            <button class="chip" data-v="3">6+ sessions</button>
+          </div></div>
+        <div class="result" id="result"><small>Pick an answer for each question to see your suggestion.</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="coach pt" id="coach">
+  <div class="wrap coach-grid">
+    <div class="coach-card reveal" aria-hidden="true">
+      <div class="row"><span>Coach</span><span>🇫🇯 · NZ</span></div>
+      <div class="mono">AG</div>
+      <div class="row"><span>Running</span><span>HYROX</span><span>Strength</span></div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Meet the coach</div>
+      <h2 class="display">Training that<br>fits real life.</h2>
+      <p>I'm Aarish — a Fijian-born coach based in New Zealand. I build practical running, hybrid and nutrition programmes around clear goals, progressive training and consistency.</p>
+      <p>Whether you're preparing for your first race or chasing a new personal best, my job is to make structured training easy to understand and even easier to follow. No fluff. Just the work that moves you forward.</p>
+      <div class="sig">— Aarish Goundar</div>
+      <div class="hero-ctas" style="margin-top:30px">
+        <a href="https://www.instagram.com/aarishgoundar/" target="_blank" rel="noopener" class="btn btn-ghost">Follow @aarishgoundar <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><div class="eyebrow">FAQs</div><h2 class="display">Good to know.</h2></div></div>
+    <div class="faq reveal">
+      <details><summary>Are the running and HYROX plans personalised?</summary><p>The digital programmes are prewritten plans built for a specific distance and experience level. For a fully individual approach, book 1:1 personal training or nutrition coaching.</p></details>
+      <details><summary>How do I receive my plan?</summary><p>After purchase, your digital programme is delivered straight to your email so you can start training right away.</p></details>
+      <details><summary>Can I train with you in person?</summary><p>Yes — 1:1 personal training runs out of Unrivaled Fitness NZ. Send a message on Instagram to check availability and book a consult.</p></details>
+      <details><summary>How does personalised nutrition work?</summary><p>You'll complete a detailed intake and suitability review first. Once approved, you'll receive your framework or start weekly coaching check-ins.</p></details>
+      <details><summary>What if I have an injury or medical condition?</summary><p>Please get in touch before purchasing. Some situations need individual review or clearance from a health professional before starting a programme.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="display">Your pace.<br>Your process.<br><span>Your progress.</span></h2>
+    <p>Ready to start? Pick a programme or reach out about 1:1 coaching.</p>
+    <div class="hero-ctas">
+      <a href="#programmes" class="btn btn-primary">Start training <span class="arrow">↗</span></a>
+      <a href="https://www.instagram.com/aarishgoundar/" target="_blank" rel="noopener" class="btn btn-ghost">Ask a question</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#top" class="logo">AARISH<span>.</span></a>
+    <div class="links">
+      <a href="https://www.instagram.com/aarishgoundar/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.trainwithaarish.com/" target="_blank" rel="noopener">trainwithaarish.com</a>
+    </div>
+    <span>© <span id="yr"></span> Aarish Goundar Performance</span>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
+document.getElementById('burger').onclick=()=>nav.classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+function showTab(t){
+  document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===t));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id==='panel-'+t));
+}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+document.querySelectorAll('.pillar').forEach(p=>p.addEventListener('click',()=>showTab(p.dataset.tab)));
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const ans={};
+const plans={'5K':['5K','$79'],'10K':['10K','$119'],'Half Marathon':['Half Marathon','$159']};
+document.querySelectorAll('.chips').forEach(g=>g.addEventListener('click',e=>{
+  const c=e.target.closest('.chip');if(!c)return;
+  g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');
+  ans[g.dataset.q]=c.dataset.v;render();
+}));
+function render(){
+  const r=document.getElementById('result');
+  if(!ans.goal||!ans.level||!ans.avail)return;
+  let title,price,tab;
+  if(ans.goal==='HYROX'){
+    const tier=ans.level==='Beginner'&&ans.avail==='1'?['Foundation','$99']:ans.level==='Advanced'||ans.avail==='3'?['Complete','$199']:['Performance','$149'];
+    title='HYROX '+tier[0]+' — '+ans.level;price=tier[1];tab='hyrox';
+  }else if(ans.goal==='Nutrition'){
+    const t=ans.level==='Beginner'?['Nutrition Foundations Guide','$39']:ans.level==='Intermediate'?['Personalised Framework','$129']:['8-Week Nutrition Coaching','$360'];
+    title=t[0];price=t[1];tab='fuel';
+  }else{
+    let g=ans.goal;
+    if(g==='Half Marathon'&&ans.level==='Beginner'&&ans.avail==='1')g='10K';
+    title=plans[g][0]+' — '+ans.level;price=plans[g][1];tab='run';
+  }
+  r.innerHTML='<small>We suggest</small><div class="r-title">'+title+'</div><small>'+price+' NZD · <a href="#programmes" style="color:var(--text);text-decoration:underline" onclick="showTab(\''+tab+'\')">View programme →</a></small>';
+}
+</script>
+</body>
+</html>
